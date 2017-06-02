@@ -1,6 +1,5 @@
-![CF](https://i.imgur.com/7v5ASc8.png)  Workshop/Lab 05: New Article Creation
+Workshop/Lab 05: New Article Creation
 =======
-[Code of Conduct](https://github.com/codefellows/code-of-conduct)
 
 ## Submission Instructions
 When you are finished with lab, follow these steps to submit your work. Create one Pull Request (aka: "PR") from your Forked repo to the CF repo with your changes, and you'll each submit that same PR link in Canvas.
@@ -16,10 +15,6 @@ When you are finished with lab, follow these steps to submit your work. Create o
 ---
 
 ## Learning Objectives
-* Recap the primary concepts discussed throughout the week.
-    * Ask the students "What have you learned so far?"
-    * Ask "What has been challenging?"
-    * Ask "What has been helpful?"
 * Build out a form to provide both a preview *and* a JSON string export of a new blog article.
 * Implement 3rd party library integration for dynamic code highlighting and markdown creation.
 
