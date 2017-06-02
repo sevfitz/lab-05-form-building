@@ -46,3 +46,16 @@ a:visited {
 /*FORM STYLES
 =======================================*/
 /*TODO: Add the CSS needed to style the form*/
+
+form input:not([type="checkbox"]) {
+  display: block;
+  width: 80%;
+  margin: 10px;
+  border: none;
+  border-bottom: green solid 1px;
+}
+
+form textarea {
+  width: 80%;
+  border: green solid 1px;
+}
