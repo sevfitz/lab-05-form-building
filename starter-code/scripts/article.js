@@ -18,18 +18,20 @@ Article.prototype.toHtml = function() {
   this.publishStatus = this.publishedOn ? `published ${this.daysAgo} days ago` : '(draft)';
 
   // TODO (stretch goal): Pass the article body into the marked.js library to format our Markdown input!
-
+  this.body = marked(this.body);
   return template(this);
 };
 
-rawData.sort(function(a,b) {
-  return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
-});
+function populateArticles() {
+  rawData.sort(function(a,b) {
+    return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
+  });
 
-rawData.forEach(function(articleObject) {
-  articles.push(new Article(articleObject));
-})
+  rawData.forEach(function(articleObject) {
+    articles.push(new Article(articleObject));
+  })
 
-articles.forEach(function(article){
-  $('#articles').append(article.toHtml())
-});
+  articles.forEach(function(article){
+    $('#articles').append(article.toHtml())
+  });
+}
