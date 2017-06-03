@@ -42,7 +42,7 @@
         <ul>
           <!-- TODO (stretch): In the same way that we enabled tab navigation on index.html, we can do the same on this page utilizing these elements. -->
           <li class="tab" data-content="write"><a href="#" class="icon-home"> Write</a></li>
-          <li class="tab" data-content="articles"><a href="#" class="icon-about"> Preview</a></li>
+          <li class="tab" data-content="preview"><a href="#" class="icon-about"> Preview</a></li>
         </ul>
       </nav>
     </header>
@@ -71,17 +71,17 @@
       </form>
 
       </section>
+      <section id="preview" class="tab-content">
+        <section id="articles">
+          <!-- NOTE: This is where we will display our article preview -->
+        </section>
 
-      <section id="articles" class="tab-content">
-        <!-- NOTE: This is where we will display our article preview -->
+        <section id="article-export">
+          <!-- TODO: Refer to the preview image to see what we will be building here: we need a container of some kind to hold a JSON export of our article. Ideally this container would show only a incipit (short preview) of the JSON and also be clickable to allow easy selection of the text it holds. What kind of element could we use for this? -->
+          <input type="text" id="article-json">
+          <label for="article-json">When finalized, copy the above JSON, and paste into blogArticles.js</label>
+        </section>
       </section>
-
-      <section id="article-export">
-        <!-- TODO: Refer to the preview image to see what we will be building here: we need a container of some kind to hold a JSON export of our article. Ideally this container would show only a incipit (short preview) of the JSON and also be clickable to allow easy selection of the text it holds. What kind of element could we use for this? -->
-        <input type="text" id="article-json">
-        <label for="article-json">When finalized, copy the above JSON, and paste into blogArticles.js</label>
-      </section>
-
     </main>
     <footer>
       &copy; 2017 Code Fellows | Static Blog | Happy Ipsum!
@@ -100,6 +100,7 @@
       // (Look at the bottom of index.html as a reference. Since we are now using our JS on two different HTML pages that have different needs as to what parts of the code they utilize, we need to build a function that inializes each page.)
       //  Hint: Look in articleView.js for a function that does this.
       articleView.initNewArticlePage();
+      articleView.handleMainNav();
     </script>
   </body>
 </html>
