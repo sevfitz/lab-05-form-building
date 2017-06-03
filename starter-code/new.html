@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/modules.css">
     <!-- NOTE (stretch goal): To fully incorporate the highlighting library "hljs" we need to fill the empty link tag below to refer to a CSS file that will handle our text highlighting -->
     <link>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     <!-- TODO: We want our new article form to be able to display a preview of the article that is being entered. Thus, we need code here that will recreate the same structure of our other articles. What do you think we need to add here? -->
 
     <script id="article-template" type="text/x-handlebars-template">
@@ -41,14 +42,14 @@
         <ul>
           <!-- TODO (stretch): In the same way that we enabled tab navigation on index.html, we can do the same on this page utilizing these elements. -->
           <li class="tab" data-content="write"><a href="#" class="icon-home"> Write</a></li>
-          <li class="tab" data-content="articles"><a href="#" class="icon-home"> Preview</a></li>
+          <li class="tab" data-content="articles"><a href="#" class="icon-about"> Preview</a></li>
         </ul>
       </nav>
     </header>
     <main class="clearfix">
 
       <section id="write" class="tab-content">
-        <h1>Create New Article</h1>
+        <h2>New Article</h2>
         <!-- TODO: Set up a form to accept user input for a new blog article. Remember that we need:
                    1. Article title
                    2. Article body
@@ -59,9 +60,8 @@
 
       <form action="">
         <fieldset>
-          <legend><h2>New Article</h2></legend>
           <input required placeholder="Title" type="text" id="article-title" maxlength="40">
-          <textarea required placeholder="Lorem Ipsum do factum..." name="" id="article-body" cols="30" rows="10"></textarea>
+          <textarea required placeholder="Put your text here." name="" id="article-body" rows="8"></textarea>
           <input required placeholder="Author" type="text" id="author-name">
           <input required placeholder="URL" type="url" id="author-url">
           <input required placeholder="Category" type="text" id="category">
@@ -79,6 +79,7 @@
       <section id="article-export">
         <!-- TODO: Refer to the preview image to see what we will be building here: we need a container of some kind to hold a JSON export of our article. Ideally this container would show only a incipit (short preview) of the JSON and also be clickable to allow easy selection of the text it holds. What kind of element could we use for this? -->
         <input type="text" id="article-json">
+        <label for="article-json">When finalized, copy the above JSON, and paste into blogArticles.js</label>
       </section>
 
     </main>
@@ -89,6 +90,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <!-- NOTE (stretch goal): Include script tags for 3rd party libraries to enable Markdown rendering and code syntax highlighting. If we are not using a CDN and instead choose to store these scripts with our project, make sure to put them into an appropriate location in the 'vendor' directory. Keep in mind that if we want these features to render properly on our main blog page (index.html) that we'll need to add those scripts over there, too. -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.js"></script>
     <script src="/scripts/blogArticles.js"></script>
     <script src="/scripts/article.js"></script>
     <script src="/scripts/articleView.js"></script>

@@ -53,7 +53,13 @@
 }
 
 /*TODO: Add CSS for the "article-export" portion of our new page*/
-
+#article-export input, label:not([for="published-on"]) {
+  color: lightgrey;
+  font-style: italic;
+  display: block;
+  width: 75%;
+  float: right;
+}
 
 @media only screen and (min-width: 640px) {
   .icon-menu {

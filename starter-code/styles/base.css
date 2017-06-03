@@ -55,7 +55,21 @@ form input:not([type="checkbox"]) {
   border-bottom: green solid 1px;
 }
 
+#published-on {
+  margin: 0 0 0 10px;
+  font-size: 1.25rem;
+}
+
+form label, #article-title, #author-name {
+  font-size: 1.25rem;
+}
+
 form textarea {
   width: 80%;
   border: green solid 1px;
+  margin: 0 0 0 10px;
+}
+
+fieldset {
+  border: none;
 }
